@@ -14,7 +14,7 @@ NEWSPIDER_MODULE = "educrawlerServicev1.spiders"
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = "educrawlerServicev1 (+http://www.yourdomain.com)"
+USER_AGENT = "educrawlerServicev1 (+http://www.yourdomain.com)"
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -39,10 +39,10 @@ RANDOMIZE_DOWNLOAD_DELAY = True
 #TELNETCONSOLE_ENABLED = False
 
 # Override the default request headers:
-#DEFAULT_REQUEST_HEADERS = {
-#    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+DEFAULT_REQUEST_HEADERS = {
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
 #    "Accept-Language": "en",
-#}
+}
 
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
@@ -58,9 +58,9 @@ RANDOMIZE_DOWNLOAD_DELAY = True
 
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html
-#EXTENSIONS = {
-#    "scrapy.extensions.telnet.TelnetConsole": None,
-#}
+EXTENSIONS = {
+    "scrapy.extensions.telnet.TelnetConsole": None,
+}
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
@@ -97,16 +97,16 @@ FEED_EXPORT_ENCODING = "utf-8"
 
 DEPTH_LIMIT = 3
 
-#SCRAPEOPS_API_KEY = 'fd0f86ec-d45d-4216-b15c-24efb1a68648'
+SCRAPEOPS_API_KEY = 'fd0f86ec-d45d-4216-b15c-24efb1a68648'
 
-#EXTENSIONS = {
-#    'scrapeops_scrapy.extension.ScrapeOpsMonitor': 500, 
-#}
+EXTENSIONS = {
+    'scrapeops_scrapy.extension.ScrapeOpsMonitor': 500, 
+}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
-#DOWNLOADER_MIDDLEWARES = {
-    #"educrawlerServicev1.middlewares.educrawlerServicev1DownloaderMiddleware": 543,
-    #'scrapeops_scrapy.middleware.retry.RetryMiddleware': 550,
-    #'scrapy.downloadermiddlewares.retry.RetryMiddleware': None,
-#}
+DOWNLOADER_MIDDLEWARES = {
+    "educrawlerServicev1.middlewares.educrawlerServicev1DownloaderMiddleware": 543,
+    'scrapeops_scrapy.middleware.retry.RetryMiddleware': 550,
+    'scrapy.downloadermiddlewares.retry.RetryMiddleware': None,
+}
